@@ -1,12 +1,19 @@
 module.exports = {
-  content: ['./index.html', './src/**/*.{vue,js,ts,jsx,tsx}'],
+  purge: ['./src/**/*.{js,jsx,ts,tsx}', './public/index.html'],
+  darkMode: false, // or 'media' or 'class'
   theme: {
-    extend: {},
+    extend: {
+      width: {
+        368: '368px',
+        400: '400px',
+        500: '500px',
+      },
+    },
   },
   variants: {
-    extend: {},
+    extend: {
+      scale: ['active'],
+    },
   },
-  plugins: [
-    require('@tailwindcss/forms'),
-  ]
-}
+  plugins: [require('@tailwindcss/forms')],
+};
