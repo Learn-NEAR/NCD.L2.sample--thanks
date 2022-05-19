@@ -1,4 +1,4 @@
-import { AnnotationIcon, LightningBoltIcon, AcademicCapIcon, DesktopComputerIcon } from '@heroicons/react/outline';
+import { AnnotationIcon, LightningBoltIcon, AcademicCapIcon, DesktopComputerIcon } from '@heroicons/vue/outline';
 
 export const transferFeatures = [
   {
