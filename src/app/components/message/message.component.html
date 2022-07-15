@@ -1,0 +1,16 @@
+<div class="mt-4 mx-6 relative block rounded-lg border border-gray-300 bg-white shadow-sm px-6 py-6 cursor-pointer hover:border-gray-400 sm:flex sm:justify-between focus:outline-none">
+  <div class="flex items-center">
+    <div class="text-sm">
+      <div class="font-medium text-gray-900">
+        {{ message.sender }}
+      </div>
+      <div class="text-gray-500 ml-1">
+        {{ message.text }}
+      </div>
+    </div>
+  </div>
+  <div class="mt-2 flex text-sm sm:mt-0 sm:block sm:ml-4 sm:text-right">
+    <div class="font-medium text-gray-900">{{ getAmount(message.contribution) }} </div>
+  </div>
+  <div class="border-transparent absolute -inset-px rounded-lg border-2 pointer-events-none" aria-hidden="true" ></div>
+</div>

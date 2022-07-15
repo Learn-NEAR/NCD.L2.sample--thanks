@@ -1,0 +1,23 @@
+<div class="relative mt-12 lg:mt-24 flex justify-center lg:m-auto lg:gap-8 lg:items-center" *ngIf="thankYouService.isOwner">
+  <div class="shadow overflow-hidden sm:rounded-md mt-4">
+    <div class="px-4 py-5 bg-white sm:p-6">
+      <div class="flex flex-col items-center">
+        <button [disabled]="isLoading" (click)="handleTransfer()"
+                class="py-2 px-4 border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 disabled:bg-indigo-300">
+          Transfer to owner (me)
+        </button>
+        <div>
+          <div *ngIf="summarizedInfo && !isLoading; else elseBlock">
+            <div *ngFor="let item of summarizedInfo.contributions | keyvalue" class="grid grid-cols-2 gap-2 mt-4">
+              <span class="text-right">{{ item.key }}: </span>
+              <span class="text-left">{{ formatData(item.value) }} </span>
+            </div>
+          </div>
+          <ng-template #elseBlock>
+            <app-loader></app-loader>
+          </ng-template>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

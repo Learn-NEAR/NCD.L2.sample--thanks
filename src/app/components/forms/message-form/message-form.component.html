@@ -1,0 +1,71 @@
+<div class="shadow overflow-hidden sm:rounded-md">
+  <div class="px-4 py-5 bg-white sm:p-6">
+    <div class="text-left pb-6">
+      <p class="text-lg leading-6 font-medium text-gray-700">
+        Record your message on the blockchain
+      </p>
+      <p class="mt-2 text-base text-gray-500">
+        No better way to say "Thanks!" than to make it permanent.
+      </p>
+      <p class="mt-2 text-base text-gray-500">
+        You can do that right here.
+      </p>
+    </div>
+    <div class="grid grid-cols-6 gap-6">
+      <div class="col-span-6">
+        <select (change)="recipientChange($event.target)" name="recipient"
+                class="w-full contract-select p-2 text-base rounded-md text-gray-500">
+          <option value="" disabled selected>Recipient name</option>
+          <option *ngFor="let recipient of thankYouService.recipients" value="{{recipient}}">{{recipient}}</option>
+        </select>
+      </div>
+      <div class="col-span-6">
+        <label for="message" class="sr-only">Your message</label>
+        <textarea
+          class="p-2 mt-1 border-gray-300 rounded-md focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm"
+          [(ngModel)]="message" rows="4" id="message" autocomplete="message" placeholder="Your message"></textarea>
+      </div>
+      <div class="col-span-6">
+        <label class="flex items-center text-xl">
+          <input type="checkbox" class="appearance-none peer" (change)="anonymous = !anonymous"/>
+          <span class="w-10 h-6 flex items-center flex-shrink-0 p-0.5 bg-gray-300 rounded-full duration-300 ease-in-out peer-checked:bg-indigo-500 after:w-5 after:h-5 after:bg-white after:rounded-full after:shadow-md after:duration-300 peer-checked:after:translate-x-4"></span>
+          <span class="ml-2 text-sm form-check-label inline-block font-medium text-gray-900">Send anonymously</span>
+        </label>
+      </div>
+      <div class="col-span-6 sm:col-span-6 lg:col-span-3">
+        <label for="tip" class="sr-only">Tip</label>
+        <div class=" relative rounded-md shadow-sm">
+          <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+            <span class="text-gray-500 sm:text-sm">Ⓝ</span>
+          </div>
+          <input type="text" id="tip"
+                 class="border-gray-300 rounded-md block w-full py-2 pl-7 pr-12 sm:text-sm "
+                 placeholder="0" aria-describedby="message-tip"
+                 [(ngModel)]="attachedDeposit"
+                 (change)="formatDeposit()"
+          />
+          <div class="absolute inset-y-0 right-0 pr-3 flex items-center pointer-events-none">
+            <span class="text-gray-500 sm:text-sm" id="message-tip">NEAR</span>
+          </div>
+        </div>
+      </div>
+      <div class="col-span-6 sm:col-span-6 lg:col-span-3 ">
+        <button (click)="handleSubmit()" [disabled]="loading"
+                class=" py-2 px-4 border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 disabled:bg-indigo-300">
+          <span *ngIf="!loading; else elseBlock">Say Thanks</span>
+          <ng-template #elseBlock>
+            <div class="flex">
+              <svg class="animate-spin -ml-1 mr-3 h-5 w-5 text-white" xmlns="http://www.w3.org/2000/svg" fill="none"
+                   viewBox="0 0 24 24">
+                <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
+                <path class="opacity-75" fill="currentColor"
+                      d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+              </svg>
+              <span>Loading...</span>
+            </div>
+          </ng-template>
+        </button>
+      </div>
+    </div>
+  </div>
+</div>

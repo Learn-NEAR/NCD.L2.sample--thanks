@@ -1,0 +1,11 @@
+<div class="mt-10 -mx-4 relative lg:mt-0 lg:col-start-1">
+  <div *ngIf="!thankYouService.isLoading; else elseBlock">
+    <div
+      *ngFor="let item of getMessages()">
+      <app-message [message]="item"></app-message>
+    </div>
+  </div>
+  <ng-template #elseBlock>
+    <app-loader></app-loader>
+  </ng-template>
+</div>
