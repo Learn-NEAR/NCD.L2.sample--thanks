@@ -1,8 +1,9 @@
 #  🎓 NCD.L2.sample--thanks dapp
-This repository contains a complete frontend applications (Vue.js, React) to work with 
+This repository contains a complete frontend applications (Vue.js, React, Angular) to work with 
 <a href="https://github.com/Learn-NEAR/NCD.L1.sample--thanks" target="_blank">NCD.L1.sample--thanks smart contract</a> targeting the NEAR platform:
 1. Vue.Js (main branch)
 2. React (react branch)
+3. Angular (angular branch)
 
 The goal of this repository is to make it as easy as possible to get started writing frontend with Vue.js, React and Angular for AssemblyScript contracts built to work with NEAR Protocol.
 
