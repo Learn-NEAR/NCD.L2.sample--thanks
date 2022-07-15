@@ -11,6 +11,7 @@
 # production
 /build
 /NCD.L1.sample--thanks
+/NCD.L2.sample--thanks
 
 # misc
 .DS_Store

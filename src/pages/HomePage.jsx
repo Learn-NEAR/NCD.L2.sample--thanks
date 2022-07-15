@@ -22,7 +22,7 @@ export const HomePage = () => {
   const getData = useCallback(async () => {
     try {
       setRecipients(await getRecipients());
-      user && setOwner(await getOwner());
+      setOwner(await getOwner());
     } catch (e) {
       setRecipients([]);
       setOwner('');
@@ -30,7 +30,7 @@ export const HomePage = () => {
       console.error(e);
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [contractId, registryContractId, user]);
+  }, [contractId, registryContractId]);
 
   useEffect(() => {
     getData();

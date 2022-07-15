@@ -19,7 +19,10 @@ export const Login = ({ error, setApiError }) => {
 
   const signIn = async () => {
     try {
-      await wallet().requestSignIn(contractId);
+      await wallet().requestSignIn({
+        contractId,
+        methodNames: [],
+      });
     } catch (error) {
       addToast(error.message, {
         appearance: 'error',
