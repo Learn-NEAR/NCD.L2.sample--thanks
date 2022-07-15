@@ -86,8 +86,8 @@ yarn lint
 ```
 
 ## 👀 Code walkthrough for Near university students
-
-<a href="https://www.loom.com/share/6019554fd4c24aef9bf032971452ec93" target="_blank">Code walkthrough video</a>
+Code walkthrough video
+<a href="https://www.loom.com/share/6bcb55d449e44116bc1e70c17c0f22a8" target="_blank">![image](https://user-images.githubusercontent.com/38455192/179203552-3e1aa10b-26ae-4ee7-9890-65789f574adc.png)</a>
 
 We are using ```near-api-js``` to work with NEAR blockchain. In ``` /services/near.js ``` we are importing classes, functions and configs which we are going to use:
 ```
