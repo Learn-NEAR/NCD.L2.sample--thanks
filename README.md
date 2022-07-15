@@ -17,7 +17,8 @@ Owner view
 
 ![image](https://user-images.githubusercontent.com/38455192/169348821-a191c98b-c1ab-4580-811c-d91baaf21db4.png)
 
-<a href="https://www.loom.com/share/da86b0536ee540a8b79d4e7c59f88b3a" target="_blank">UI walkthrough</a>
+UI walkthrough
+<a href="https://www.loom.com/share/da86b0536ee540a8b79d4e7c59f88b3a" target="_blank">![image](https://user-images.githubusercontent.com/38455192/179209812-21dda94f-504f-4f87-bf7b-371cb9f1140b.png)</a>
 
 You can use this app with contract ids which were deployed by the creators of this repo or you can use it with your own deployed contract ids.
 If you are using not yours contract ids some functions of the thanks/registry contracts will not work because they are set to work only if owner called this  functions.
