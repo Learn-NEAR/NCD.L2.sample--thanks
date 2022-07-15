@@ -1,7 +1,6 @@
 #  🎓 NCD.L2.sample--thanks dapp
 This repository contains a complete frontend applications (React) to work with 
 <a href="https://github.com/Learn-NEAR/NCD.L1.sample--thanks" target="_blank">NCD.L1.sample--thanks smart contract</a> targeting the NEAR platform:
-1. React (master branch)
 
 The goal of this repository is to make it as easy as possible to get started writing frontend with React for AssemblyScript contracts built to work with NEAR Protocol.
 
